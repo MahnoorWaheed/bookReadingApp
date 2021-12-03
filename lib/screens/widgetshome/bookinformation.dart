@@ -92,7 +92,7 @@ class _BookInformationState extends State<BookInformation> {
                   Expanded(
                     child: GestureDetector(
                       onTap: (){
-                       Navigator.of(context).pushNamed("/chapters");
+                       Navigator.of(context).pushNamed("/bookview");
                       },
                       child: Container(
                         decoration: BoxDecoration(

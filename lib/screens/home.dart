@@ -1,8 +1,11 @@
 import 'package:bookapp/models/usermodel.dart';
+import 'package:bookapp/screens/widgetshome/bookcover.dart';
+import 'package:bookapp/screens/widgetshome/rating.dart';
 import 'package:bookapp/screens/widgetshome/readingsection.dart';
 import 'package:bookapp/utils/uils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
+import 'package:google_fonts/google_fonts.dart';
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -90,14 +93,63 @@ class BestOfTheDay extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         color: Color(0xffE6E2E2)
       ),
-        child: Column(
-      children: [
-        SizedBox(height: 10,),
-        Text(book.title),
-        Text(book.author),
-        Text(book.rating.toString()),
-        Text(username.firstName),
-      ],
-    ));
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Positioned(
+              top: -35,
+              left: 200,
+            child: BookCover(bookCover: book.bookCover, height: 150,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 30,horizontal: 25),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(book.title),
+                Text(book.author),
+                SizedBox(
+                  height: 70,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Rating(rating: book.rating),
+                    Container(
+                      padding: EdgeInsets.only(left: 10),
+                      width: screenWidth(context)*0.5,
+                      child: Text(
+                        book.details,
+                        maxLines:3,
+                        overflow: TextOverflow.ellipsis,
+                        ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          
+        Positioned(
+          top: 190,
+          left: 270,
+          child: Container(
+            width: 80,
+            height: 35,
+                    decoration:const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        bottomRight: Radius.circular(10),
+                      ),
+                      color:Colors.black,
+                    ),
+                    child: Center(child: Text("Read", style: GoogleFonts.poppins(color:Colors.white)))
+                  ),
+        )
+        ],
+      ),
+      
+      );
   }
 }

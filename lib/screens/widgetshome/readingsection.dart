@@ -35,7 +35,7 @@ class _ReadingSectionState extends State<ReadingSection> {
           child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 25),
             scrollDirection: Axis.horizontal,
-            children: widget.books.map((book) {
+            children: widget.books.map((yahakuchbhilesaktyhain) {
               return Padding(
                 padding: const EdgeInsets.only(right: 25.0),
                 child: Center(
@@ -43,7 +43,7 @@ class _ReadingSectionState extends State<ReadingSection> {
                     clipBehavior: Clip.none,
                     children: [
                       BookInformation(
-                        book: book,
+                        book: yahakuchbhilesaktyhain,
                         onShowingDetails: (bool isShowingDetails) {
                           print("I AM RUNNING HERE");
                           setState(() {
@@ -52,7 +52,12 @@ class _ReadingSectionState extends State<ReadingSection> {
                         },
                       ),
                       isShowingCover == true
-                          ? BookCover(bookCover: book.bookCover)
+                          ? Positioned(
+                            top: -20,
+                            left: 80,
+                            child: BookCover(
+                              bookCover: yahakuchbhilesaktyhain.bookCover),
+                          )
                           : SizedBox(),
                     ],
                   ),
