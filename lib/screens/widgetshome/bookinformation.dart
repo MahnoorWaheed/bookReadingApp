@@ -24,7 +24,6 @@ class BookInformation extends StatefulWidget {
 class _BookInformationState extends State<BookInformation> {
 
    bool isShowingDetails = false;
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -92,7 +91,7 @@ class _BookInformationState extends State<BookInformation> {
                   Expanded(
                     child: GestureDetector(
                       onTap: (){
-                       Navigator.of(context).pushNamed("/bookview");
+                       Navigator.of(context).pushNamed("/bookview" );
                       },
                       child: Container(
                         decoration: BoxDecoration(

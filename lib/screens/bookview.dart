@@ -1,3 +1,4 @@
+import 'package:bookapp/models/usermodel.dart';
 import 'package:bookapp/screens/bookviewwidgets/listofchap.dart';
 import 'package:bookapp/screens/bookviewwidgets/readbookdetails.dart';
 import 'package:bookapp/utils/uils.dart';
@@ -10,14 +11,15 @@ class BookView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // final bookchap = ModalRoute.of(context)!.settings.arguments as Chapter;
     return Scaffold(
       body: Stack(
         clipBehavior: Clip.none,
         children: [
-        BookReadDetails(),
+         BookReadDetails(),
               Positioned(
                 top: 165,
-                left: 160,
+                left: 165,
                 child: Container(
                            height: 60,
                            width: 35,

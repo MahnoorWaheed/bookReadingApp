@@ -31,9 +31,13 @@ class BookReadDetails extends StatelessWidget {
                    Text("Book title from Book home screen", 
                    style: GoogleFonts.poppins(fontSize: 20),
                    ),
-                   Text("Book title from Book home screen title from Book home screen", 
-                   style: GoogleFonts.poppins(
-                     fontSize: 11,color: Colors.grey),
+                   Container(
+                     width: 150,
+                     child: Text("Book title from Book home screen title from Book home screen", 
+                     style: GoogleFonts.poppins(
+                       fontSize: 11,color: Colors.grey),
+                       maxLines: 3,
+                     ),
                    ),
                    Container(
                      height: 25,
