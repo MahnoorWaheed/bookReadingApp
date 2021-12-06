@@ -3,7 +3,6 @@
 import 'package:bookapp/screens/bookview.dart';
 import 'package:bookapp/screens/home.dart';
 import 'package:bookapp/screens/splash.dart';
-import 'package:bookapp/screens/widgetshome/bookcover.dart';
 import 'package:flutter/material.dart';
 
 class BookApp extends StatelessWidget {

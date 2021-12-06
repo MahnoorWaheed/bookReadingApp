@@ -1,8 +1,7 @@
 import 'dart:convert';
-
 import 'package:bookapp/models/usermodel.dart';
-import 'package:bookapp/screens/widgetshome/rating.dart';
 import 'package:bookapp/utils/uils.dart';
+import 'package:bookapp/widgets/widgetshome/rating.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:google_fonts/google_fonts.dart';
@@ -92,7 +91,8 @@ class _BookInformationState extends State<BookInformation> {
                   Expanded(
                     child: GestureDetector(
                       onTap: (){
-                       Navigator.of(context).pushNamed("/bookview");
+                       Navigator.of(context).pushNamed("/bookview", 
+                       arguments: widget.book);
                       },
                       child: Container(
                         decoration: BoxDecoration(

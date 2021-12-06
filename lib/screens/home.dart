@@ -1,8 +1,8 @@
 import 'package:bookapp/models/usermodel.dart';
-import 'package:bookapp/screens/widgetshome/bookcover.dart';
-import 'package:bookapp/screens/widgetshome/rating.dart';
-import 'package:bookapp/screens/widgetshome/readingsection.dart';
 import 'package:bookapp/utils/uils.dart';
+import 'package:bookapp/widgets/widgetshome/bookcover.dart';
+import 'package:bookapp/widgets/widgetshome/rating.dart';
+import 'package:bookapp/widgets/widgetshome/readingsection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:google_fonts/google_fonts.dart';

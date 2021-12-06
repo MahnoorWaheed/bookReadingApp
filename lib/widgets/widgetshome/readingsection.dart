@@ -1,7 +1,7 @@
 
 import 'package:bookapp/models/usermodel.dart';
-import 'package:bookapp/screens/widgetshome/bookcover.dart';
-import 'package:bookapp/screens/widgetshome/bookinformation.dart';
+import 'package:bookapp/widgets/widgetshome/bookcover.dart';
+import 'package:bookapp/widgets/widgetshome/bookinformation.dart';
 import 'package:flutter/material.dart';
 
 class ReadingSection extends StatefulWidget {
@@ -35,7 +35,7 @@ class _ReadingSectionState extends State<ReadingSection> {
           child: ListView(
             padding: EdgeInsets.symmetric(horizontal: 25),
             scrollDirection: Axis.horizontal,
-            children: widget.books.map((yahakuchbhilesaktyhain) {
+            children: widget.books.map((book) {
               return Padding(
                 padding: const EdgeInsets.only(right: 25.0),
                 child: Center(
@@ -43,7 +43,7 @@ class _ReadingSectionState extends State<ReadingSection> {
                     clipBehavior: Clip.none,
                     children: [
                       BookInformation(
-                        book: yahakuchbhilesaktyhain,
+                        book: book,
                         onShowingDetails: (bool isShowingDetails) {
                           print("I AM RUNNING HERE");
                           setState(() {
@@ -56,7 +56,7 @@ class _ReadingSectionState extends State<ReadingSection> {
                             top: -20,
                             left: 80,
                             child: BookCover(
-                              bookCover: yahakuchbhilesaktyhain.bookCover),
+                              bookCover: book.bookCover),
                           )
                           : SizedBox(),
                     ],

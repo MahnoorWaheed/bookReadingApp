@@ -1,3 +1,4 @@
+import 'package:bookapp/models/usermodel.dart';
 import 'package:bookapp/utils/uils.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -5,12 +6,15 @@ import 'package:google_fonts/google_fonts.dart';
 class BookReadDetails extends StatelessWidget {
   const BookReadDetails({
     Key? key,
+    required this.allChapDesc
+    
   }) : super(key: key);
-
+  
+  final Book allChapDesc;
   @override
   Widget build(BuildContext context) {
     return Container(
-           height: screenHeight(context)*0.4,
+           height: screenHeight(context)*0.45,
            width:screenWidth(context),
           decoration: const BoxDecoration(
              color: Colors.yellow,
@@ -28,10 +32,10 @@ class BookReadDetails extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                children: [
-                   Text("Book title from Book home screen", 
+                   Text(allChapDesc.title, 
                    style: GoogleFonts.poppins(fontSize: 20),
                    ),
-                   Text("Book title from Book home screen title from Book home screen", 
+                   Text(allChapDesc.details, 
                    style: GoogleFonts.poppins(
                      fontSize: 11,color: Colors.grey),
                    ),
