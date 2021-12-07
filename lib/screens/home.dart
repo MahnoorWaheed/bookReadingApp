@@ -28,7 +28,6 @@ class Home extends StatelessWidget {
                    bottomRight: Radius.circular(50),
                  )
               ),
-           
              ),
            Align(
              alignment: const Alignment(1.5,-1.15),
